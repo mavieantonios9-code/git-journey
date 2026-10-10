@@ -1,0 +1,21 @@
+name: CI & CD
+
+on:
+   push:
+      branches:
+         -main
+         -master
+
+
+jobs:
+   job1:
+     runs-on: ubuntu-latest
+     steps:
+        -mame: Say Hello
+        run: echo "Hello World" 
+   job2:
+      needs: job1              
+      runs on: ubuntu-latest
+      steps:
+         -mame: Welcome
+         run: echo "Welcome to NU"
